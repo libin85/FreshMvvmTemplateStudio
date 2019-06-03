@@ -1,0 +1,20 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Project">
+    <RelativePathOnDisk>CSharp\1033\FreshMvvmEnterpriseTemplate</RelativePathOnDisk>
+    <TemplateFileName>FreshMvvmEnterpriseTemplate.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <Name>FreshMvvmEnterpriseTemplate</Name>
+        <Description>FreshMvvmEnterpriseTemplate</Description>
+        <Icon>FreshMvvmEnterpriseTemplate.ico</Icon>
+        <ProjectType>CSharp</ProjectType>
+        <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+        <SortOrder>1000</SortOrder>
+        <TemplateID>1da058a1-0c44-4c49-947b-01f10826c9bc</TemplateID>
+        <CreateNewFolder>true</CreateNewFolder>
+        <DefaultName>FreshMvvmEnterpriseTemplate</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>

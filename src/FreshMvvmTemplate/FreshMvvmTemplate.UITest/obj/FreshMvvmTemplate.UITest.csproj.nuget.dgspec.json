@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\libin\\Desktop\\FreshMvvmTemplate\\FreshMvvmTemplate.UITest\\FreshMvvmTemplate.UITest.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\libin\\Desktop\\FreshMvvmTemplate\\FreshMvvmTemplate.UITest\\FreshMvvmTemplate.UITest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\libin\\Desktop\\FreshMvvmTemplate\\FreshMvvmTemplate.UITest\\FreshMvvmTemplate.UITest.csproj",
+        "projectName": "FreshMvvmTemplate.UITest",
+        "projectPath": "C:\\Users\\libin\\Desktop\\FreshMvvmTemplate\\FreshMvvmTemplate.UITest\\FreshMvvmTemplate.UITest.csproj",
+        "packagesPath": "C:\\Users\\libin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\libin\\Desktop\\FreshMvvmTemplate\\FreshMvvmTemplate.UITest\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\libin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Projects\\FreshMvvm\\src\\FreshMvvm\\bin\\Release": {},
+          "C:\\Users\\libin\\Desktop": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "NUnit": {
+              "target": "Package",
+              "version": "[2.6.4, )"
+            },
+            "NUnitTestAdapter": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Xamarin.UITest": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

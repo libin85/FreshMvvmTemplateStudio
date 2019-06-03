@@ -1,0 +1,221 @@
+{
+    "author": "Libin Joseph",
+    "classifications": ["Xamarin", "FreshMvvm"],
+    "name": "FreshMvvm Enterrpise Template",
+    "tags": {
+        "language": "C#"
+    },
+    "identity": "libin.freshtemplate",
+    "shortName": "freshtemplate",
+    "sourceName": "FreshMvvmTemplate",
+    "guids": [
+        "{41F47D3C-C9E4-45D1-A289-3BDC31E44C19}",
+        "{980FBE34-066B-4E87-AFC9-C3205844D980}",
+        "{FD448FB5-B24B-4CD2-8E3C-2500CF0E4601}",
+        "{D8FC665A-7739-4ADE-85E9-C69AA107EEE6}",
+        "{92D25D7D-F637-4634-B939-BB38DE53B606}",
+        "{5D52EDF7-47B8-48D2-83B6-104B18568CE4}",
+        "{12E171B1-0F36-401A-A171-614F1A1C83E9}",
+        "{7A4597AE-2C39-4197-94C9-F5B6B45B2106}"
+
+    ],
+    "primaryOutputs": [{
+
+            "condition": "(TargetPlatforms == 'android' || TargetPlatforms == 'both')",
+            "path": "FreshMvvmTemplate\\FreshMvvmTemplate.Android\\FreshMvvmTemplate.Android.csproj"
+        },
+        {
+            "condition": "(TargetPlatforms == 'ios' || TargetPlatforms == 'both')",
+            "path": "FreshMvvmTemplate\\FreshMvvmTemplate.iOS\\FreshMvvmTemplate.iOS.csproj"
+        },
+        {
+            "path": "FreshMvvmTemplate\\FreshMvvmTemplate\\FreshMvvmTemplate.csproj"
+        },
+        {
+            "condition": "(UnitTest == 'nunit')",
+            "path": "FreshMvvmTemplate.UnitTest\\FreshMvvmTemplate.UnitTest.csproj"
+        },
+        {
+            "condition": "(UITest == 'xamarinuitest')",
+            "path": "FreshMvvmTemplate.UITest\\FreshMvvmTemplate.UITest.csproj"
+        },
+        {
+            "path": "FreshMvvmTemplate.Core\\FreshMvvmTemplate.Core.csproj"
+        }
+    ],
+    "symbols": {
+        "TargetPlatforms": {
+            "type": "parameter",
+            "datatype": "choice",
+            "isRequired": false,
+            "choices": [{
+                    "choice": "android",
+                    "description": "Only the android project will be added to the solution"
+                },
+                {
+                    "choice": "ios",
+                    "description": "Only the iOS project will be added to the solution"
+                },
+                {
+                    "choice": "both",
+                    "description": "Both android and ios projects will be added to the solution"
+                }
+            ],
+            "defaultValue": "both",
+            "description": "Use this option to choose the target the platform projects that you wish to add to the solution."
+        },
+        "UnitTest": {
+            "type": "parameter",
+            "datatype": "choice",
+            "isRequired": false,
+            "choices": [{
+                    "choice": "none",
+                    "description": "No unit test project will be added to the solution"
+                },
+                {
+                    "choice": "nunit",
+                    "description": "A NUnit test project will be added to the solution"
+                }
+            ],
+            "defaultValue": "nunit",
+            "description": "Use this option to choose the unit testing for the project"
+        },
+        "UITest": {
+            "type": "parameter",
+            "datatype": "choice",
+            "isRequired": false,
+            "choices": [{
+                    "choice": "none",
+                    "description": "No UI test project will be added to the solution"
+                },
+                {
+                    "choice": "xamarinuitest",
+                    "description": "A Xamarin UI Test project will be added to the solution"
+                }
+            ],
+            "defaultValue": "xamarinuitest",
+            "description": "Use this option to choose the unit testing for the project"
+        },
+        "Api": {
+            "type": "parameter",
+            "datatype": "choice",
+            "isRequired": false,
+            "choices": [{
+                    "choice": "none",
+                    "description": "No api access code will be added to the project"
+                },
+                {
+                    "choice": "refit",
+                    "description": "A refit implementation for accessing the API will be added"
+                }
+            ],
+            "defaultValue": "refit",
+            "description": "Use this option to choose the API implementation for the project"
+        },
+        "Logging": {
+            "type": "parameter",
+            "datatype": "choice",
+            "isRequired": false,
+            "choices": [{
+                    "choice": "none",
+                    "description": "No logging code will be added to the project"
+                },
+                {
+                    "choice": "appcenter",
+                    "description": "AppCenter logging will be added to the project"
+                },
+                {
+                    "choice": "serilog",
+                    "description": "Serilog will be added to the project"
+                }
+            ],
+            "defaultValue": "appcenter",
+            "description": "Use this option to choose the logging framework for the project"
+        },
+        "Caching": {
+            "type": "parameter",
+            "datatype": "choice",
+            "isRequired": false,
+            "choices": [{
+                    "choice": "none",
+                    "description": "No caching code will be added to the project"
+                },
+                {
+                    "choice": "monkeycachesqlite",
+                    "description": "A monkey cache will be added to the project"
+                }
+            ],
+            "defaultValue": "monkeycachesqlite",
+            "description": "Use this option to choose the API implementation for the project"
+        },
+        "Navigation": {
+            "type": "parameter",
+            "datatype": "choice",
+            "isRequired": false,
+            "choices": [{
+                    "choice": "blank",
+                    "description": "A plain navigation container will be created."
+                },
+                {
+                    "choice": "tabbed",
+                    "description": "A tabbed navigation will be added"
+                },
+                {
+                    "choice": "hamburger",
+                    "description": "a hamburger menu will be added"
+                }
+            ],
+            "defaultValue": "blank",
+            "description": "Use this option to choose the unit testing for the project"
+        }
+    },
+    "sources": [{
+        "modifiers": [{
+                "condition": "(UITest != 'xamarinuitest')",
+                "exclude": [
+                    "**/FreshMvvmTemplate.UITest/**"
+                ]
+            },
+            {
+                "condition": "(UnitTest != 'nunit')",
+                "exclude": [
+                    "**/FreshMvvmTemplate.UnitTest/**"
+                ]
+            },
+            {
+                "condition": "(!(TargetPlatforms == 'android' || TargetPlatforms == 'both'))",
+                "exclude": [
+                    "**/FreshMvvmTemplate/FreshMvvmTemplate.Android**"
+                ]
+            },
+            {
+                "condition": "(!(TargetPlatforms == 'ios' || TargetPlatforms == 'both'))",
+                "exclude": [
+                    "**/FreshMvvmTemplate/FreshMvvmTemplate.iOS**"
+                ]
+            },
+            {
+                "condition": "(Caching != 'monkeycachesqlite')",
+                "exclude": [
+                    "**/FreshMvvmTemplate.Core/Data/Cache**"
+                ]
+            },
+            {
+                "condition": "(Logging != 'appcenter')",
+                "exclude": [
+                    "**/FreshMvvmTemplate.Core/Logging**"
+                ]
+            },
+            {
+                "condition": "(Api != 'refit')",
+                "exclude": [
+                    "**/FreshMvvmTemplate.Core/Data/Api**",
+                    "**/FreshMvvmTemplate.Core/Data/Dto**",
+                    "**/FreshMvvmTemplate.Core/Data/Tools**"
+                ]
+            }
+
+        ]
+    }],
+    "exclude": ["**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.lock.json"]
+}

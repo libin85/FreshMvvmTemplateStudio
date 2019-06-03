@@ -1,0 +1,9 @@
+C:\Users\libin\Desktop\FreshMvvmTemplate\FreshMvvmTemplate.UITest\bin\Debug\FreshMvvmTemplate.UITest.dll
+C:\Users\libin\Desktop\FreshMvvmTemplate\FreshMvvmTemplate.UITest\bin\Debug\FreshMvvmTemplate.UITest.pdb
+C:\Users\libin\Desktop\FreshMvvmTemplate\FreshMvvmTemplate.UITest\bin\Debug\nunit.framework.dll
+C:\Users\libin\Desktop\FreshMvvmTemplate\FreshMvvmTemplate.UITest\bin\Debug\Xamarin.UITest.dll
+C:\Users\libin\Desktop\FreshMvvmTemplate\FreshMvvmTemplate.UITest\obj\Debug\FreshMvvmTemplate.UITest.csprojAssemblyReference.cache
+C:\Users\libin\Desktop\FreshMvvmTemplate\FreshMvvmTemplate.UITest\obj\Debug\FreshMvvmTemplate.UITest.csproj.CoreCompileInputs.cache
+C:\Users\libin\Desktop\FreshMvvmTemplate\FreshMvvmTemplate.UITest\obj\Debug\FreshMvvmTemplate.UITest.csproj.CopyComplete
+C:\Users\libin\Desktop\FreshMvvmTemplate\FreshMvvmTemplate.UITest\obj\Debug\FreshMvvmTemplate.UITest.dll
+C:\Users\libin\Desktop\FreshMvvmTemplate\FreshMvvmTemplate.UITest\obj\Debug\FreshMvvmTemplate.UITest.pdb

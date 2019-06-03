@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\libin\\Documents\\GitHub\\FreshMvvmEnterpriseTemplate\\src\\Wizard\\FreshMvvmEnterpriseWizard\\FreshMvvmEnterpriseWizard.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\libin\\Documents\\GitHub\\FreshMvvmEnterpriseTemplate\\src\\Wizard\\FreshMvvmEnterpriseWizard\\FreshMvvmEnterpriseWizard.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\libin\\Documents\\GitHub\\FreshMvvmEnterpriseTemplate\\src\\Wizard\\FreshMvvmEnterpriseWizard\\FreshMvvmEnterpriseWizard.csproj",
+        "projectName": "FreshMvvmEnterpriseWizard",
+        "projectPath": "C:\\Users\\libin\\Documents\\GitHub\\FreshMvvmEnterpriseTemplate\\src\\Wizard\\FreshMvvmEnterpriseWizard\\FreshMvvmEnterpriseWizard.csproj",
+        "packagesPath": "C:\\Users\\libin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\libin\\Documents\\GitHub\\FreshMvvmEnterpriseTemplate\\src\\Wizard\\FreshMvvmEnterpriseWizard\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\libin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Projects\\FreshMvvm\\src\\FreshMvvm\\bin\\Release": {},
+          "C:\\Users\\libin\\Desktop": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Extended.Wpf.Toolkit": {
+              "target": "Package",
+              "version": "[3.5.0, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[2.5.1, )"
+            },
+            "Microsoft.VSSDK.BuildTools": {
+              "target": "Package",
+              "version": "[16.0.2268, )"
+            },
+            "Microsoft.VisualStudio.SDK": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[15.9.3, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
