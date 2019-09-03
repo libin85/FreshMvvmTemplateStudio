@@ -10,7 +10,7 @@ variables:
   buildConfiguration: Release
   buildPlatform: Any CPU
   coreSolution: 'src\FreshMvvmTemplate\FreshMvvmTemplate.sln'
-  coreCSProj: 'src\FreshMvvm\*.csproj'
+  nuspecFile: 'src\nuspec\freshmvvmtemplate.nuspec'
 
 pool:
   vmImage: 'vs2017-win2016'
@@ -22,5 +22,10 @@ steps:
     solution: '$(coreSolution)'
     configuration: '$(buildConfiguration)'
     msbuildArgs: '/t:Restore'
+    
+- task: NuGetCommand@2
+  inputs:
+    command: pack
+    packagesToPack: '$(nuspecFile)'
 
 
