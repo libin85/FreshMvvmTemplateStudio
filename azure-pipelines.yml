@@ -22,14 +22,18 @@ steps:
     solution: '$(coreSolution)'
     configuration: '$(buildConfiguration)'
     msbuildArgs: '/t:Restore'
-    
+
 - task: NuGetCommand@2
   inputs:
-    command: pack
+    command: 'pack'
     packagesToPack: '$(nuspecFile)'
-    feedsToUse: 'select'
+    versioningScheme: 'off'
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
-    publishVstsFeed: 'FreshMvvmTemplateFeed'
-    allowPackageConflicts: true
+    nuGetFeedType: 'internal'
+    publishVstsFeed: 'c8e5eeed-1abf-4d13-9810-3d4d77489e8b'
 
 
