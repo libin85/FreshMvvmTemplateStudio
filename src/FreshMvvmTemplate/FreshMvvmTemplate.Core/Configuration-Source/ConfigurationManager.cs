@@ -1,51 +1,40 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
-using System.Text;
 
 namespace FreshMvvmTemplate.Core.Configuration
 {
     public class ConfigurationManager
     {
         private static ConfigurationManager _instance;
-        private JObject _configSettings;
-
+        private readonly JObject _configSettings;
         private const string FileName = "config.json";
 
         private ConfigurationManager()
         {
             try
             {
-                var assembly = IntrospectionExtensions.GetTypeInfo(typeof(ConfigurationManager)).Assembly;
+                var assembly = typeof(ConfigurationManager).GetTypeInfo().Assembly;
                 var nameSpace = typeof(ConfigurationManager).Namespace;
                 var stream = assembly.GetManifestResourceStream($"{nameSpace}.{FileName}");
-                using (var reader = new StreamReader(stream))
+                if (stream != null)
                 {
-                    var json = reader.ReadToEnd();
-                    _configSettings = JObject.Parse(json);
+                    using (var reader = new StreamReader(stream))
+                    {
+                        var json = reader.ReadToEnd();
+                        _configSettings = JObject.Parse(json);
+                    }
                 }
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Unable to read the confiuguration file: {ex}");
+                Debug.WriteLine($"Unable to read the configuration file: {ex}");
             }
         }
 
-        public static ConfigurationManager Settings
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new ConfigurationManager();
-                }
-
-                return _instance;
-            }
-        }
+        public static ConfigurationManager Settings => _instance ?? (_instance = new ConfigurationManager());
 
         public string this[string name]
         {
@@ -54,13 +43,11 @@ namespace FreshMvvmTemplate.Core.Configuration
                 try
                 {
                     var path = name.Split(':');
-
-                    JToken node = _configSettings[path[0]];
-                    for (int index = 1; index < path.Length; index++)
+                    var node = _configSettings[path[0]];
+                    for (var index = 1; index < path.Length; index++)
                     {
                         node = node[path[index]];
                     }
-
                     return node.ToString();
                 }
                 catch (Exception)

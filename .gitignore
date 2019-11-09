@@ -1,0 +1,9 @@
+
+*.cache
+*.ide-wal
+*.ide-shm
+src/FreshMvvmTemplate/.vs/FreshMvvmTemplate/DesignTimeBuild/.dtbcache
+src/FreshMvvmTemplate/.vs/FreshMvvmTemplate/v16/Server/sqlite3/storage.ide-wal
+src/FreshMvvmTemplate/.vs/FreshMvvmTemplate/v16/Server/sqlite3/storage.ide-shm
+src/FreshMvvmTemplate/.vs/FreshMvvmTemplate/v16/Server/sqlite3/storage.ide
+src/FreshMvvmTemplate/.vs/FreshMvvmTemplate/DesignTimeBuild/.dtbcache
